@@ -107,6 +107,7 @@ class GeneralMCQAdapter(DataAdapter):
         if self.model_adapter == OutputType.MULTIPLE_CHOICE:
             return result
         else:
+            # 这里只用了parse_first_option_with_choices函数
             return ResponseParser.parse_first_option_with_choices(text=result, options=self.choices)
 
     def match(self, gold: str, pred: str) -> float:
