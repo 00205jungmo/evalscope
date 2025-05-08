@@ -9,10 +9,10 @@ from evalscope.utils import ResponseParser
 from evalscope.utils.logger import get_logger
 
 # flake8: noqa
-
+# 获取日志记录器
 logger = get_logger()
 
-
+# 
 @Benchmark.register(
     name='general_mcq',
     pretty_name='General MCQ',
